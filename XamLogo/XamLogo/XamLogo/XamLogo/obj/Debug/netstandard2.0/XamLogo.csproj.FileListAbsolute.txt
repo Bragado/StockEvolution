@@ -1,0 +1,9 @@
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\bin\Debug\netstandard2.0\XamLogo.deps.json
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\bin\Debug\netstandard2.0\XamLogo.dll
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\bin\Debug\netstandard2.0\XamLogo.pdb
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.csprojAssemblyReference.cache
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.csproj.CoreCompileInputs.cache
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.AssemblyInfoInputs.cache
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.AssemblyInfo.cs
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.dll
+C:\Users\Luis Coelho\Downloads\XamLogo\XamLogo\XamLogo\XamLogo\obj\Debug\netstandard2.0\XamLogo.pdb

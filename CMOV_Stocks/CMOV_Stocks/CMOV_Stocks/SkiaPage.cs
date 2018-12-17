@@ -36,13 +36,21 @@ namespace CMOV_Stocks
         string stock2 = "Micro";
         int period = 7;         // last 7 days
 
+        private Company company1;
+        public Company Company1 {
+            get { return company1; }
+            set {
+                company1 = value;
+                uri1.Replace("{CODE}", company1.Code);
+            }
+        }
 
         public SkiaPage() {
             //set uris - change api_keys if necessary
-            uri1 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol=INTC&type=daily&startDate=20181113";
-            uri2 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol=AAPL&type=daily&startDate=20181113";
+            uri1 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
+            uri2 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
 
-            Title = "XamLogo";
+            Title = "My Stocks";
             skiaView = new SKCanvasView() {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand

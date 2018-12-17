@@ -8133,11 +8133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\CMOV_Stocks.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\CMOV_Stocks.UWP.csproj",
       "projectName": "CMOV_Stocks.UWP",
-      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\CMOV_Stocks.UWP.csproj",
+      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\CMOV_Stocks.UWP.csproj",
       "packagesPath": "C:\\Users\\Miguel Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\obj\\",
+      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8157,8 +8157,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
-              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
+            "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
+              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
             }
           }
         }

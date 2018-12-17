@@ -1018,11 +1018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\CMOV_Stocks.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\CMOV_Stocks.Android.csproj",
       "projectName": "CMOV_Stocks.Android",
-      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\CMOV_Stocks.Android.csproj",
+      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\CMOV_Stocks.Android.csproj",
       "packagesPath": "C:\\Users\\Miguel Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\obj\\",
+      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1039,8 +1039,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
-              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
+            "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
+              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
             }
           }
         }

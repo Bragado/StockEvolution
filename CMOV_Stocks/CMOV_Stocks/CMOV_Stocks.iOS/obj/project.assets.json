@@ -1081,11 +1081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\CMOV_Stocks.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\CMOV_Stocks.iOS.csproj",
       "projectName": "CMOV_Stocks.iOS",
-      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\CMOV_Stocks.iOS.csproj",
+      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\CMOV_Stocks.iOS.csproj",
       "packagesPath": "C:\\Users\\Miguel Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1102,8 +1102,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
-              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
+            "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj": {
+              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj"
             }
           }
         }

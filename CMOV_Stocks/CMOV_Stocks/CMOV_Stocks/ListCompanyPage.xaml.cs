@@ -20,6 +20,7 @@ namespace CMOV_Stocks
 
         public ListCompanyPage()
         {
+            Title = "My Stocks";
             InitializeComponent();
             BindingContext = new CompanyListViewModel();
         }
@@ -64,8 +65,10 @@ namespace CMOV_Stocks
 
                     if (doubleClickSelected != null && doubleClickSelected.Equals(lastItemPressed)) {
                         doubleClickSelected = null;
+                        lastItemPressed.Selected = false;
                     } else {
                         doubleClickSelected = lastItemPressed;
+                        lastItemPressed.Selected = true;
                     }
                     
                 } else {
@@ -74,6 +77,9 @@ namespace CMOV_Stocks
                     if (doubleClickSelected != null) {
                         //send to comparison interface
                     } else {
+                        SkiaPage skiaPage = new SkiaPage();
+                        skiaPage.Company1 = lastItemPressed;
+                        Navigation.PushAsync(new NavigationPage(new SkiaPage()));
                         //send to single company interface
                     }
                 }

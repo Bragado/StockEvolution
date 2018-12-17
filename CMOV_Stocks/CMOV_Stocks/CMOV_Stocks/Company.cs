@@ -4,13 +4,15 @@ using System.Text;
 
 namespace CMOV_Stocks
 {
-    class Company {
+    public class Company {
         public string Code { get; set; }
         public string Name { get; set; }
+        public Boolean Selected { get; set; }
 
         public Company(string _code, string _name) {
             Code = _code;
             Name = _name;
+            Selected = false;
         }
 
         public bool Equals(Company other) {

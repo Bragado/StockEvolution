@@ -516,11 +516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj",
       "projectName": "CMOV_Stocks",
-      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj",
+      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks.csproj",
       "packagesPath": "C:\\Users\\Miguel Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\FEUP-CMOV\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\obj\\",
+      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\CMOV_Stocks\\CMOV_Stocks\\CMOV_Stocks\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

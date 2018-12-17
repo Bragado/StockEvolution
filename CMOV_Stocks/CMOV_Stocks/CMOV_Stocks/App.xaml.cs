@@ -9,7 +9,7 @@ namespace CMOV_Stocks {
             InitializeComponent();
 
             MainPage = new NavigationPage(new SkiaPage());
-            //MainPage = new ListCompanyPage();
+            //MainPage = new NavigationPage(new ListCompanyPage());
         }
 
         protected override void OnStart() {

@@ -1076,20 +1076,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Luis Coelho\\.nuget\\packages\\": {}
+    "C:\\Users\\Miguel Lucas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luis Coelho\\Downloads\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\XamLogo.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\XamLogo.iOS.csproj",
       "projectName": "XamLogo.iOS",
-      "projectPath": "C:\\Users\\Luis Coelho\\Downloads\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\XamLogo.iOS.csproj",
-      "packagesPath": "C:\\Users\\Luis Coelho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luis Coelho\\Downloads\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\XamLogo.iOS.csproj",
+      "packagesPath": "C:\\Users\\Miguel Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\XamLogo\\XamLogo\\XamLogo\\XamLogo.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Luis Coelho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Miguel Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1102,8 +1102,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Luis Coelho\\Downloads\\XamLogo\\XamLogo\\XamLogo\\XamLogo\\XamLogo.csproj": {
-              "projectPath": "C:\\Users\\Luis Coelho\\Downloads\\XamLogo\\XamLogo\\XamLogo\\XamLogo\\XamLogo.csproj"
+            "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\XamLogo\\XamLogo\\XamLogo\\XamLogo\\XamLogo.csproj": {
+              "projectPath": "C:\\Users\\Miguel Lucas\\Documents\\GitHub\\StockEvolution\\XamLogo\\XamLogo\\XamLogo\\XamLogo\\XamLogo.csproj"
             }
           }
         }

@@ -38,7 +38,8 @@ namespace CMOV_Stocks
 
             if (((Company) e.Item).Equals(lastItemPressed)) {
                 if (ButtonCount < 1) {
-                    Device.StartTimer(TimeSpan.FromMilliseconds(500), TapHandler);
+
+                    Device.StartTimer(TimeSpan.FromMilliseconds(500), () => TapHandler((Company) e.Item));
                 }
             } else {
                 if (ButtonCount > 0) {
@@ -46,7 +47,7 @@ namespace CMOV_Stocks
                     stopTokens.Push("Token");
                 }
 
-                Device.StartTimer(TimeSpan.FromMilliseconds(500), TapHandler);
+                Device.StartTimer(TimeSpan.FromMilliseconds(500), () => TapHandler(e.Item));
             }
 
             Console.WriteLine("Last Pressed = " + lastItemPressed);
@@ -57,30 +58,31 @@ namespace CMOV_Stocks
             ((ListView) sender).SelectedItem = null;
         }
 
-        bool TapHandler() {
+        bool TapHandler(Object company) {
             if (stopTokens.Count == 0) {
                 if (ButtonCount > 1) {
                     //double click
-                    DisplayAlert("", "Two Clicks - " + lastItemPressed.ToString(), "OK");
+                    //DisplayAlert("", "Two Clicks - " + lastItemPressed.ToString(), "OK");
 
                     if (doubleClickSelected != null && doubleClickSelected.Equals(lastItemPressed)) {
                         doubleClickSelected = null;
-                        lastItemPressed.Selected = false;
+                        ((Company) company).Selected = false;
                     } else {
                         doubleClickSelected = lastItemPressed;
-                        lastItemPressed.Selected = true;
+                        ((Company) company).Selected = true;
                     }
                     
                 } else {
                     //single click
-                    DisplayAlert("", "One Click - " + lastItemPressed.ToString(), "OK");
-                    if (doubleClickSelected != null) {
+                    //DisplayAlert("", "One Click - " + lastItemPressed.ToString(), "OK");
+                    if (doubleClickSelected != null && !doubleClickSelected.Equals(lastItemPressed)) {
                         //send to comparison interface
+                        SkiaPage skiaPage = new SkiaPage(lastItemPressed, doubleClickSelected);
+                        Navigation.PushAsync(new NavigationPage(skiaPage));
                     } else {
-                        SkiaPage skiaPage = new SkiaPage();
-                        skiaPage.Company1 = lastItemPressed;
-                        Navigation.PushAsync(new NavigationPage(new SkiaPage()));
-                        //send to single company interface
+                        //send single company
+                        SkiaPage skiaPage = new SkiaPage(lastItemPressed, null);
+                        Navigation.PushAsync(new NavigationPage(skiaPage));
                     }
                 }
 

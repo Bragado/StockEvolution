@@ -270,6 +270,12 @@ namespace CMOV_Stocks
                 using (SKPaint paint = new SKPaint()) {
 
                     text = (string) yLabels[i];
+
+                    if (text.Equals("")) {
+                        depth += realWidth / ylevels;
+                        continue;
+                    }
+
                     paint.TextSize = 25;
                     string text1 = "" + text;
 

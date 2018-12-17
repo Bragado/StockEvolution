@@ -36,19 +36,34 @@ namespace CMOV_Stocks
         string stock2 = "Micro";
         int period = 7;         // last 7 days
 
-        private Company company1;
-        public Company Company1 {
-            get { return company1; }
-            set {
-                company1 = value;
-                uri1.Replace("{CODE}", company1.Code);
-            }
-        }
+        public Company Company1 { get; set; }
+        public Company Company2 { get; set; }
 
         public SkiaPage() {
+            InitiatePage();
+        }
+
+        public SkiaPage(Company company1, Company company2) {
+            Company1 = company1;
+
+            if (company2 != null)
+                Company2 = company2;
+
+            InitiatePage();
+        }
+
+        private void InitiatePage() {
             //set uris - change api_keys if necessary
             uri1 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
             uri2 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
+
+            if (Company1 != null) {
+                uri1 = uri1.Replace("{CODE}", Company1.Code);
+            }
+
+            if (Company2 != null) {
+                uri2 = uri2.Replace("{CODE}", Company2.Code);
+            }
 
             Title = "My Stocks";
             skiaView = new SKCanvasView() {
@@ -68,40 +83,34 @@ namespace CMOV_Stocks
             Content = layout;
             uri = uri1;
             Task.Factory.StartNew(GetStockInfoAsync);
-
-
         }
 
         private void OnPaintDrawing(object sender, SKPaintSurfaceEventArgs e) {
 
-
             e.Surface.Canvas.Clear();
             ArrayList xLabels = null, yLabels = null;
 
-
             xLabels = Utils.GetXLabels(points, 4);
             yLabels = Utils.GetYLabels(m1, period);
-
-
 
             if (points2 != null) {
                 ArrayList total = new ArrayList();
                 total.AddRange(points);
                 total.AddRange(points2);
                 xLabels = Utils.GetXLabels(total, 4);
-
             }
 
-
-
             Plot2D plot = new Plot2D(e.Surface.Canvas, e.Info.Height, e.Info.Width, yLabels, xLabels, points, points2);
-            plot.Label1 = stock1;
-            plot.Label2 = stock2;
+            plot.Label1 = Company1.Code;
+
+            if (Company2 != null) {
+                plot.Label2 = Company2.Code;
+            } else {
+                plot.Label2 = "";
+            }
+            
             plot.Display();
-
-
         }
-
 
         public void DoSomething(String message) {
             if (points != null) {
@@ -112,25 +121,19 @@ namespace CMOV_Stocks
                 m1 = message;
             }
 
-
             skiaView.InvalidateSurface();
-
-
-
-
         }
 
         public async System.Threading.Tasks.Task GetStockInfoAsync() {
             string Result;
             using (HttpClient client = new HttpClient())
                 try {
-
                     HttpResponseMessage message = await client.GetAsync(uri);
                     Console.WriteLine(uri);
                     if (message.StatusCode == HttpStatusCode.OK)
                         DoSomething(await message.Content.ReadAsStringAsync());
 
-                    if (uri.Equals(uri1) && !uri2.Equals("")) {
+                    if (Company2 != null && uri.Equals(uri1) && !uri2.Equals("")) {
                         uri = uri2;
                         Task.Factory.StartNew(GetStockInfoAsync);
                     }

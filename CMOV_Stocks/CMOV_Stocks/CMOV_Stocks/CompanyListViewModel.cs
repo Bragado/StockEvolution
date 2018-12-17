@@ -17,9 +17,9 @@ namespace CMOV_Stocks
 
         private void Initialize() {
             List<Company> list = new List<Company>();
-            list.Add(new Company("APPL", "Apple"));
+            list.Add(new Company("AAPL", "Apple"));
             list.Add(new Company("IBM", "IBM"));
-            list.Add(new Company("HPM", "Hewlett Packard"));
+            list.Add(new Company("HPE", "Hewlett Packard"));
             list.Add(new Company("MSFT", "Microsoft"));
             list.Add(new Company("ORCL", "Oracle"));
             list.Add(new Company("GOOGL", "Google"));

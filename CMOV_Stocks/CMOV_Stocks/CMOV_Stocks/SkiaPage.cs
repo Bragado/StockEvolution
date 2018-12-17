@@ -32,8 +32,6 @@ namespace CMOV_Stocks
         string uri2 = "";
         
         /* Info */
-        string stock1 = "Apple";
-        string stock2 = "Micro";
         int period = 7;         // last 7 days
 
         public Company Company1 { get; set; }
@@ -54,8 +52,8 @@ namespace CMOV_Stocks
 
         private void InitiatePage() {
             //set uris - change api_keys if necessary
-            uri1 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
-            uri2 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181113";
+            uri1 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181101";
+            uri2 = "https://marketdata.websol.barchart.com/getHistory.json?apikey=" + api_key2 + "&symbol={CODE}&type=daily&startDate=20181101";
 
             if (Company1 != null) {
                 uri1 = uri1.Replace("{CODE}", Company1.Code);
@@ -71,15 +69,34 @@ namespace CMOV_Stocks
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
             skiaView.PaintSurface += OnPaintDrawing;
-            var title = new Label() {
-                HorizontalTextAlignment = TextAlignment.Center,
-                Text = "Xamarin Logo"
+            Picker picker = new Picker {
+                Title = "Period",
+                Margin = new Thickness(50, 10),
+                HorizontalOptions = LayoutOptions.Center
+                //VerticalOptions = LayoutOptions.CenterAndExpand
             };
+
+            for (int i = 7; i <= 30; i++) { 
+                picker.Items.Add(i.ToString());
+            }
             var layout = new StackLayout() {
                 Spacing = 0.0
             };
+            layout.Children.Add(picker);
             layout.Children.Add(skiaView);
-            layout.Children.Add(title);
+
+            picker.SelectedIndexChanged += (sender, args) =>
+            {
+                if (picker.SelectedIndex == -1) {
+                    period = 7;
+                } else {
+                    string periodString = picker.Items[picker.SelectedIndex];
+                    period = Int32.Parse(periodString);
+                }
+
+                Task.Factory.StartNew(GetStockInfoAsync);
+            };
+
             Content = layout;
             uri = uri1;
             Task.Factory.StartNew(GetStockInfoAsync);
@@ -113,7 +130,7 @@ namespace CMOV_Stocks
         }
 
         public void DoSomething(String message) {
-            if (points != null) {
+            if (Company2 != null && points != null) {
                 points2 = Utils.ParseStockPoints(message, period);
                 m2 = message;
             } else {

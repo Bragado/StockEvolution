@@ -64,7 +64,8 @@ namespace CMOV_Stocks
             } else if (y == 30) {
                 return new ArrayList() { initialDay, "", "", "", "", finalDay };
             } else {
-                return new ArrayList() { "Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom" };
+                //return new ArrayList() { "Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom" };
+                return new ArrayList() { initialDay, "", "", "", "", finalDay };
             }
         }
     }

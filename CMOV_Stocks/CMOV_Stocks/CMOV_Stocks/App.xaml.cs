@@ -5,6 +5,8 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace CMOV_Stocks {
     public partial class App : Application {
+
+        static CompanyDatabase database;
         public App() {
             InitializeComponent();
 
@@ -22,6 +24,17 @@ namespace CMOV_Stocks {
 
         protected override void OnResume() {
             // Handle when your app resumes
+        }
+
+        public static CompanyDatabase Database {
+            get {
+                if (database == null) {
+                    string dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"database.db3");
+                    //string dbPath = DependencyService.Get<IFileHelper>().GetLocalFilePath("database.db3");
+                    database = new CompanyDatabase(dbPath);
+                }
+                return database;
+            }
         }
     }
 }

@@ -15,20 +15,26 @@ namespace CMOV_Stocks
             }
         }
 
-        private void Initialize() {
-            List<Company> list = new List<Company>();
-            list.Add(new Company("AAPL", "Apple"));
-            list.Add(new Company("IBM", "IBM"));
-            list.Add(new Company("HPE", "Hewlett Packard"));
-            list.Add(new Company("MSFT", "Microsoft"));
-            list.Add(new Company("ORCL", "Oracle"));
-            list.Add(new Company("GOOGL", "Google"));
-            list.Add(new Company("FB", "Facebook"));
-            list.Add(new Company("TWTR", "Twitter"));
-            list.Add(new Company("INTC", "Intel"));
-            list.Add(new Company("AMD", "AMD"));
-
-            Companies = new ObservableCollection<Company>(list);
+        async private void Initialize() {
+            if (CompanyDatabase.connected != 2) {
+                try {
+                    List<Company> listdb = await App.Database.GetItemsAsync();
+                    Companies = new ObservableCollection<Company>(listdb);
+                } catch (System.Exception e) {
+                    List<Company> list = new List<Company>();
+                    list.Add(new Company("AAPL", "Apple"));
+                    list.Add(new Company("IBM", "IBM"));
+                    list.Add(new Company("HPE", "Hewlett Packard"));
+                    list.Add(new Company("MSFT", "Microsoft"));
+                    list.Add(new Company("ORCL", "Oracle"));
+                    list.Add(new Company("GOOGL", "Google"));
+                    list.Add(new Company("FB", "Facebook"));
+                    list.Add(new Company("TWTR", "Twitter"));
+                    list.Add(new Company("INTC", "Intel"));
+                    list.Add(new Company("AMD", "AMD"));
+                    Companies = new ObservableCollection<Company>(list);
+                }
+            } 
         }
     }
 }

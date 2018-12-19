@@ -23,6 +23,11 @@ namespace CMOV_Stocks
             Title = "My Stocks";
             InitializeComponent();
             BindingContext = new CompanyListViewModel();
+
+            if (Device.RuntimePlatform == Device.UWP) {
+                NavigationPage.SetHasNavigationBar(this, false);
+            }
+                
         }
 
         public void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -78,11 +83,19 @@ namespace CMOV_Stocks
                     if (doubleClickSelected != null && !doubleClickSelected.Equals(lastItemPressed)) {
                         //send to comparison interface
                         SkiaPage skiaPage = new SkiaPage(lastItemPressed, doubleClickSelected);
-                        Navigation.PushAsync(new NavigationPage(skiaPage));
+                        if (Device.RuntimePlatform == Device.UWP) {
+                            Navigation.PushAsync(skiaPage);
+                        } else {
+                            Navigation.PushAsync(new NavigationPage(skiaPage));
+                        }
                     } else {
                         //send single company
                         SkiaPage skiaPage = new SkiaPage(lastItemPressed, null);
-                        Navigation.PushAsync(new NavigationPage(skiaPage));
+                        if (Device.RuntimePlatform == Device.UWP) {
+                            Navigation.PushAsync(skiaPage);
+                        } else {
+                            Navigation.PushAsync(new NavigationPage(skiaPage));
+                        }
                     }
                 }
 
@@ -92,6 +105,17 @@ namespace CMOV_Stocks
             }
 
             return false;
+        }
+
+        async void OnItemAdded(object sender, EventArgs e) {
+            var oldBinding = (CompanyListViewModel) BindingContext;
+            await Navigation.PushAsync(new CompanyPage {
+                BindingContext = new CompanyViewModel {
+                    CompanyList = oldBinding.Companies,
+                    Item = new Company(),
+                    Nav = Navigation
+                }
+            });
         }
     }
 }
